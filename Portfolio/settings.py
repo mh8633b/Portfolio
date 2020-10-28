@@ -25,6 +25,15 @@ SECRET_KEY = '=phae7)8_ykp+b-i4l@&z(^9&ggpdpi3=bv#)*@3w_tu@o$72&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+EMAIL_HOST = 'smtp.google.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'mh8633b@gmail.com'
+EMAIL_HOST_PASSWORD = 'Andr01dP13'
+EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'djandgo.core.mail.backends.smtp.EmailBackend'
+
+
+
 ALLOWED_HOSTS = ['127.0.0.1','muneebportfolio.herokuapp.com']
 
 

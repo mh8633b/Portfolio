@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.core.mail import send_mail
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,6 +13,7 @@ def index(request):
         email = request.POST.get('email','')
         cnt = connect(u_name=name, u_subject=subject , u_email=email)
         cnt.save()
+        send_mail("abc","asdasdad", 'mh8633b@gmail.com',['monybluex@gmail.com'])
         # print(request)
     projects = project.objects.all
     exp = experience.objects.all
