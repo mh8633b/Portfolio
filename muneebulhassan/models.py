@@ -11,7 +11,7 @@ class connect(models.Model):
 
 class project(models.Model):
     p_name = models.CharField(max_length=30)
-    p_link = models.CharField(max_length=100)
+    p_link = models.CharField(max_length=100, blank=True)
     p_description = models.CharField(max_length=110)
     p_framework = models.CharField(max_length=50)
 

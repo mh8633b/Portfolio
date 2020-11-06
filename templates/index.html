@@ -306,21 +306,54 @@
         {% endfor %}
         </div>
     </section>
-    <section id="projects">
+
+
+{#    <section id="projects">#}
+{#        <div class="container">#}
+{#            <div class="row module">#}
+{#                {% for p in project %}#}
+{#                    <div class="col-sm-4 project-container ">#}
+{#                    <h3 class="hf">#}
+{#                        {{p.p_name}}#}
+{#                        {% if p.p_link != "" %}#}
+{#                            <a href="{{p.p_link }}">#}
+{#                            {% if 'github.com' in p.p_link %}#}
+{#                                <i class="fab fa-github source-icon"></i>#}
+{#                            {% endif %}#}
+{#                            {% if 'colab.research.google.com' in p.p_link %}#}
+{#                                <i class="fas fa-code source-icon"></i>#}
+{#                            {% endif %}#}
+{#                            </a>#}
+{#                        {% endif %}#}
+{#                    </h3>#}
+{#                    <br>#}
+{#                    <p>{{p.p_description}}</p>#}
+{#                    <br>#}
+{#                    <p>{{p.p_framework}}</p>#}
+{#                </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    
+        <section id="projects">
         <div class="container">
             <div class="row module">
-                {% for p in project %}
+                {% for r in repos %}
                     <div class="col-sm-4 project-container ">
-                    <h3 class="hf">{{p.p_name}}<a href="{{p.p_link }}"><i class="fab fa-github source-icon"></i></a></h3>
-                    <br>
-                    <p>{{p.p_description}}</p>
-                    <br>
-                    <p>{{p.p_framework}}</p>
+                    <h3 class="hf">
+                        {{r.data}}
+                        hello
+                    </h3>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </section>
+
+
+
+
     <section id="contact-form">
         <div class=" container contact-form module">
             <div class="row">
