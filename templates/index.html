@@ -245,7 +245,7 @@
                 <div class="contentPost">
                     <h2>A Software Enginner</h2>
                     <br>
-                    <a href="https://drive.google.com/file/d/1vQkWxorJa3FwlzgV5JCx1p2E7IJbRFsd/view?usp=sharing"><button type="button" class="btn btn-primary btn-lg">-View Resume</button></a>
+                    <a href="https://drive.google.com/file/d/1t5m8bMZO_xAEzWduli1Iut-lwisOX1Ds/view?usp=sharing"><button type="button" class="btn btn-primary btn-lg">-View Resume</button></a>
                 </div>
             </div>
         </div>
@@ -306,54 +306,27 @@
         {% endfor %}
         </div>
     </section>
-
-
-{#    <section id="projects">#}
-{#        <div class="container">#}
-{#            <div class="row module">#}
-{#                {% for p in project %}#}
-{#                    <div class="col-sm-4 project-container ">#}
-{#                    <h3 class="hf">#}
-{#                        {{p.p_name}}#}
-{#                        {% if p.p_link != "" %}#}
-{#                            <a href="{{p.p_link }}">#}
-{#                            {% if 'github.com' in p.p_link %}#}
-{#                                <i class="fab fa-github source-icon"></i>#}
-{#                            {% endif %}#}
-{#                            {% if 'colab.research.google.com' in p.p_link %}#}
-{#                                <i class="fas fa-code source-icon"></i>#}
-{#                            {% endif %}#}
-{#                            </a>#}
-{#                        {% endif %}#}
-{#                    </h3>#}
-{#                    <br>#}
-{#                    <p>{{p.p_description}}</p>#}
-{#                    <br>#}
-{#                    <p>{{p.p_framework}}</p>#}
-{#                </div>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#        </div>#}
-{#    </section>#}
-    
-        <section id="projects">
+    <section id="projects">
         <div class="container">
             <div class="row module">
                 {% for r in repos %}
+                    {% if r.name != 'monybluex' %}
                     <div class="col-sm-4 project-container ">
-                    <h3 class="hf">
-                        {{r.data}}
-                        hello
-                    </h3>
-                </div>
+                        <h3 class="hf">{{r.name}}<a href="{{ r.html_url }}"><i class="fab fa-github source-icon"></i></a></h3>
+                        <br>
+                        <p>{{r.description}}</p>
+                        <br>
+                        <p>{% for key in r.lang %}
+                            <p style=" display: inline;">{{key}}</p>
+                            {% endfor %}
+                        </p>
+                    </div>
+                    {% endif %}
+
                 {% endfor %}
             </div>
         </div>
     </section>
-
-
-
-
     <section id="contact-form">
         <div class=" container contact-form module">
             <div class="row">
@@ -387,7 +360,7 @@
                             <li><a href="#experience">Experience</a></li>
                         </ul>
                     </h4>
-                </div>
+                  </div>
                 <div class="col-sm-8 c-about">
                     <h2 class="hf">about me</h2><br>
                     <h4>I am a Software Engineer working and learning flutter and machine learning and trying to be perfect one day.</h4><br>
